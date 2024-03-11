@@ -20,7 +20,7 @@ o.id_order as id_order
 ,sum(c.acc_balance) as account_balance
 ,c.ds_mkt_segment as ds_mkt_segment
 ,o.st_order as st_order
-,avg(o.price) as price
+,coalesce(round(avg(o.price),3),0) as price
 ,o.dt_order as dt_order
 ,o.ds_priority as ds_priority
 ,o.id_clerk as id_clerk
